@@ -1,0 +1,30 @@
+<?php
+$title = 'Close server';
+$this->headtitle($title);
+?>
+<h1><?php echo $this->escapehtml($title); ?></h1>
+<?php 
+$form->setAttribute('action', $this->url('server', array(
+    'action'    => 'close',
+    'id'        => $this->id,
+)));
+$form->prepare();
+// echo $this->formcollection($form);
+echo $this->form()->openTag($form);
+echo $this->formhidden($form->get('id'));
+?>
+
+<p>Are you sure to close this server?</p>
+
+<div><?php echo $this->formsubmit($form->get('submit')); ?><?php echo $this->formbutton($form->get('back'), 'Back'); ?></div>
+<?php echo $this->form()->closeTag(); ?>
+
+<?php
+$this->inlinescript()->captureStart();
+echo <<<JS
+    $('#btnBack').click(function() {
+        window.location.href = '/server';
+    });
+JS;
+$this->inlinescript()->captureEnd();
+?>

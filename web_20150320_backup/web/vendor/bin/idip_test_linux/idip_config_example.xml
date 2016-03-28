@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<metalib name="CX" proto="json" version="1.0" urlencode="true" encoding="utf-8">
+  <command name="cmd" desc="IDIP前端协议" >
+    <entry cmd="102001" req="IDIP_DO_ACTIVE_USR_REQ" rsp="IDIP_DO_ACTIVE_USR_RSP"
+           req_value="uin=Uin#area=AreaId#world_id=WorldId"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='激活用户' />
+    <entry cmd="102002" req="IDIP_QUERY_ACTIVE_REQ" rsp="IDIP_QUERY_ACTIVE_RSP"
+           req_value="uin=Uin#area=AreaId#world_id=WorldId"
+           rsp_value="result=Result#uin=Uin#active_time=ActiveTime"
+           desc='查询QQ号激活' />
+
+    <entry cmd="102003" req="IDIP_QUERY_SYSTEM_INFO_REQ" rsp="IDIP_QUERY_SYSTEM_INFO_RSP" 
+           req_value="area=AreaId#world_id=WorldId"  
+           rsp_value="online=Online#registered=Registered#standed=Standed" 
+           desc='获取系统信息配置' />
+
+    <entry cmd="102004" req="IDIP_DO_SET_SERVER_STATE_REQ" rsp="IDIP_DO_SET_SERVER_STATE_RSP"
+           req_value="area=AreaId#world_id=WorldId#state=State"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='服务器状态配置' />
+
+    <entry cmd="102005" req="IDIP_DO_SET_SERVER_ONOFF_REQ" rsp="IDIP_DO_SET_SERVER_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='服务器开关' />
+
+    <entry cmd="102006" req="IDIP_DO_SET_SYSTEM_INFO_REQ" rsp="IDIP_DO_SET_SYSTEM_INFO_RSP"
+           req_value="area=AreaId#world_id=WorldId#online=Online#registered=Registered#standed=Standed"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='系统信息配置设置' /> 
+
+    <entry cmd="102007" req="IDIP_DO_SET_NOTICE_INFO_REQ" rsp="IDIP_DO_SET_NOTICE_INFO_RSP"
+           req_value="area=AreaId#world_id=WorldId#location=Location#color=Color#notice_content=NoticeContent#send=Send"
+           rsp_value="result=Result#err_info=RetMsg#notice_content=NoticeContent#location=Location"
+           desc='编辑公告信息' /> 
+
+    <entry cmd="102008" req="IDIP_SET_EVENT_ONOFF_REQ" rsp="IDIP_SET_EVENT_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='活动功能开关' />
+
+    <entry cmd="102009" req="IDIP_SET_SINGLE_EVENT_CONFIG_REQ" rsp="IDIP_SET_SINGLE_EVENT_CONFIG_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On#id=Id"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='单独活动配置' />
+
+    <entry cmd="102010" req="IDIP_SET_EVENT_CONFIG_REQ" rsp="IDIP_SET_EVENT_CONFIG_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On#id=Id#start_time=StartTime#end_time=EndTime"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='活动配置' />
+
+    <entry cmd="102011" req="IDIP_SET_DOUBLE_EXP_ONOFF_REQ" rsp="IDIP_SET_DOUBLE_EXP_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='双倍经验开关配置' />
+
+    <entry cmd="102012" req="IDIP_SET_COPY_ONOFF_REQ" rsp="IDIP_SET_COPY_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='副本功能开关' />
+    
+    <entry cmd="102013" req="IDIP_SET_SINGLE_COPY_ONOFF_REQ" rsp="IDIP_SET_SINGLE_COPY_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On#id=Id"  
+           rsp_value="result=Result#error_info=RetMsg" 
+           desc='单独副本功能开关' />
+
+    <entry cmd="102014" req="IDIP_SET_EQUIP_STRONG_ONOFF_REQ" rsp="IDIP_SET_EQUIP_STRONG_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='装备强化功能开关' />
+
+    <entry cmd="102015" req="IDIP_SET_LEARN_SKILL_ONOFF_REQ" rsp="IDIP_SET_LEARN_SKILL_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='技能学习功能开关' />
+
+    <entry cmd="102016" req="IDIP_SET_PET_MIX_ONOFF_REQ" rsp="IDIP_SET_PET_MIX_ONOFF_RSP"
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='宠物融合功能开关' />
+
+    <entry cmd="102017" req="IDIP_SET_TRADE_ONOFF_REQ" rsp="IDIP_SET_TRADE_ONOFF_RSP" 
+           req_value="area=AreaId#world_id=WorldId#on=On"
+           rsp_value="result=Result#err_info=RetMsg"
+           desc='交易功能开关' />
+           
+    <entry cmd="102018" req="IDIP_QUERY_ONLINE_NUM_REQ" rsp="IDIP_QUERY_ONLINE_NUM_RSP" 
+           req_value="area=AreaId#world_id=WorldId"
+           rsp_value="online=Online#cur_regNum=RegNum"
+           desc='查询大区在线人数' />
+           
+    <entry cmd="00102" req="IDIP_DO_KICKOFF_USR_REQ" rsp="IDIP_DO_KICKOFF_USR_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='踢人' />
+            
+    <entry cmd="102019" req="IDIP_DO_MASK_CHAT_REQ" rsp="IDIP_DO_MASK_CHAT_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#maskend_time=MaskEndTime"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='禁言处理' />   
+
+    <entry cmd="102020" req="IDIP_DO_BAN_USR_REQ" rsp="IDIP_DO_BAN_USR_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#banend_time=BanEndTime"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='封号处理' />
+
+    <entry cmd="102021" req="IDIP_DO_UNBAN_USR_REQ" rsp="IDIP_DO_UNBAN_USR_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='解除封号处理' />
+
+    <entry cmd="102022" req="IDIP_DO_UNMASK_CHAT_REQ" rsp="IDIP_DO_UNMASK_CHAT_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='解除禁言处理' />
+           
+    <entry cmd="102023" req="IDIP_DO_UPDATE_MONEY_REQ" rsp="IDIP_DO_UPDATE_MONEY_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#money=MoneyCount"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='修改金币' />
+    <entry cmd="102024" req="IDIP_DO_UPDATE_CASH_REQ" rsp="IDIP_DO_UPDATE_CASH_RSP" 
+           req_value="uin=Uin#charac_no=RoleId#area=AreaId#world_id=WorldId#source=Source#coin_amount=Amount"  
+           rsp_value="result=Result#error_info=RetMsg"
+           desc='修修改点卷' />
+    <entry cmd="102025" req="IDIP_DO_SET_EXP_REQ" rsp="IDIP_DO_SET_EXP_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#value=Value"
+           rsp_value="result=Result#curr_value=CurrValue#err_info=RetMsg" 
+           desc='修改经验' />
+    <entry cmd="102026" req="IDIP_DO_SET_LEVEL_REQ" rsp="IDIP_DO_SET_LEVEL_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#value=Value"
+           rsp_value="result=Result#curr_value=CurrValue#err_info=RetMsg" 
+           desc='修改等级' />
+    <entry cmd="102027" req="IDIP_DO_SET_SKILL_LEVEL_REQ" rsp="IDIP_DO_SET_SKILL_LEVEL_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#value=Value#item_id=ItemId"
+           rsp_value="result=Result#curr_value=CurrValue#err_info=RetMsg" 
+           desc='修改技能等级' />
+    <entry cmd="102028" req="IDIP_DO_SET_EQUIP_STRONG_LEVEL_REQ" rsp="IDIP_DO_SET_EQUIP_STRONG_LEVEL_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#value=Value#item_id=ItemId"
+           rsp_value="result=Result#curr_value=CurrValue#err_info=RetMsg" 
+           desc='修改装备强化等级' />
+    <entry cmd="102029" req="IDIP_DO_SET_EQUIP_COMPOSE_LEVEL_REQ" rsp="IDIP_DO_SET_EQUIP_COMPOSE_LEVEL_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#value=Value#item_id=ItemId"
+           rsp_value="result=Result#curr_value=CurrValue#err_info=RetMsg" 
+           desc='修改装备合成等级' />
+    <entry cmd="102030" req="IDIP_DO_DEL_BAGITEM_REQ" rsp="IDIP_DO_DEL_BAGITEM_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#count=Count#item_id=ItemId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='删除背包中道具' />
+    <entry cmd="102031" req="IDIP_DO_DEL_STOREITEM_REQ" rsp="IDIP_DO_DEL_STOREITEM_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#count=Count#item_id=ItemId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='删除仓库中道具' />
+    <entry cmd="102032" req="IDIP_DO_SEND_SIMPLE_ITEM_REQ" rsp="IDIP_DO_SEND_SIMPLE_ITEM_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#count=Count#item_id=ItemId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='发送道具' />
+    <entry cmd="102033" req="IDIP_DO_SEND_PET_REQ" rsp="IDIP_DO_SEND_PET_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#count=Count#item_id=ItemId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='赠送宠物' />
+    <entry cmd="102034" req="IDIP_DO_DEL_PET_REQ" rsp="IDIP_DO_DEL_PET_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#count=Count#item_id=ItemId"
+           rsp_value="result=Result#err_info=RetMsg" 
+           desc='删除宠物' />
+    <entry cmd="102035" req="IDIP_QUERY_ROLELIST_REQ" rsp="IDIP_QUERY_ROLELIST_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId"  
+           rsp_value="list=ucRoleCount|vecRoleListMsg|" 
+           desc='查询角色列表' />
+    <entry cmd="102036" req="IDIP_QUERY_ROLEBASEINFO_REQ" rsp="IDIP_QUERY_ROLEBASEINFO_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId"
+           rsp_value="nick_name=NickName#hp=hp#mp=mp#mastery=mastery#crtRate=crtRate#exp=exp#phyAtk=phyAtk#phyDef=phyDef#macAtk=macAtk#macDef=macDef#phyAcc=phyAcc#macAcc=macAcc#phyDodge=phyDodge#macDodge=macDodge#poir=poir#thunder=thunder#icer=icer#firer=firer#darkr=darkr#holyr=holyr#seal=seal#root=root#curse=curse#deceleration=deceleration#frozen=frozen#stun=stun#str=str#con=con#dex=dex#intl=intl#profession=profession#proppoint=proppoint#status=status#vitality=vitality#castlevel=castlevel#pharmacistlevel=pharmacistlevel#regtime=regtime#accforbidhistory=accforbidhistory#talkforbidhistory=talkforbidhistory" 
+           desc='查询角色基本信息' />
+    <entry cmd="102037" req="IDIP_QUERY_ROLE_BAG_REQ" rsp="IDIP_QUERY_ROLE_BAG_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#page_no=PageNo#page_size=PageSize"  
+           rsp_value="page_no=PageNo#bagitem=BagItemCount|pBagItemList|" 
+           desc='查询角色背包信息' /> 
+    <entry cmd="102038" req="IDIP_QUERY_ROLESKILL_REQ" rsp="IDIP_QUERY_ROLESKILL_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId"
+           rsp_value="skill=SkillCount|vecSkillList|" 
+           desc='查询角色技能' />
+    <entry cmd="102039" req="IDIP_QUERY_ROLE_BODY_EQUIP_REQ" rsp="IDIP_QUERY_ROLE_BODY_EQUIP_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId"
+           rsp_value="equip=EquipCount|pBodyEquipInfo|" 
+           desc='查询角色装备信息' />
+    <entry cmd="102040" req="IDIP_QUERY_ARMY_REQ" rsp="IDIP_QUERY_ARMY_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#army_id=ArmyId"
+           rsp_value="top=ArmyInfo.Top#army_name=ArmyInfo.Name#leader=ArmyInfo.Leader#count=ArmyInfo.Count#strengh=ArmyInfo.Strength#level=ArmyInfo.Level" 
+           desc='查询家族信息' />
+    <entry cmd="102041" req="IDIP_QUERY_ARMY_MEMBER_REQ" rsp="IDIP_QUERY_ARMY_MEMBER_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#army_id=ArmyId#page_no=PageNo#page_size=PageSize"
+           rsp_value="page_no=PageNo#list=Count|ArmyMemberList|"
+           desc='查询家族成员信息' />
+    <entry cmd="102042" req="IDIP_QUERY_ROLE_FRIEND_REQ" rsp="IDIP_QUERY_ROLE_FRIEND_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#page_no=PageNo#page_size=PageSize"
+           rsp_value="page_no=PageNo#list=Count|FriendList|" 
+           desc='查询角色好友信息' />
+    <entry cmd="102043" req="IDIP_QUERY_BUY_RECORD_REQ" rsp="IDIP_QUERY_BUY_RECORD_RSP" 
+           req_value="uin=Uin#area=AreaId#world_id=WorldId#charac_no=RoleId#page_no=PageNo#page_size=PageSize"
+           rsp_value="page_no=PageNo#list=Count|BuyList|" 
+           desc='查询商场购买记录' />
+  </command>
+  
+  <macrosgroup name="NET_CMD_ID" desc="IDIP命令编码" >
+    <macro name="IDIP_DO_PAY_CASH_REQ"             value="0x0001" desc="充值代币请求" />
+    <macro name="IDIP_DO_PAY_CASH_RSP"             value="0x0002" desc="充值代币应答" />
+    <macro name="IDIP_DO_UPDATE_CASH_REQ"          value="0x0005" desc="修改点券请求（客服使用）" />
+    <macro name="IDIP_DO_UPDATE_CASH_RSP"          value="0x0006" desc="修改点券应答" />
+    <macro name="IDIP_QUERY_ACTIVE_REQ"            value="0x1001" desc="查询QQ号激活请求" />
+    <macro name="IDIP_QUERY_ACTIVE_RSP"            value="0x1002" desc="查询QQ号激活应答" />
+    <macro name="IDIP_QUERY_ROLELIST_REQ"          value="0x1003" desc="查询角色列表请求" />
+    <macro name="IDIP_QUERY_ROLELIST_RSP"          value="0x1004" desc="查询角色列表应答" />
+    <macro name="IDIP_QUERY_ROLEBASEINFO_REQ"      value="0x1005" desc="查询角色基本信息请求" />
+    <macro name="IDIP_QUERY_ROLEBASEINFO_RSP"      value="0x1006" desc="查询角色基本信息应答" />
+    <macro name="IDIP_QUERY_ITEM_REQ"              value="0x4001" desc="查询角色道具列表请求" />
+    <macro name="IDIP_QUERY_ITEM_RSP"              value="0x4002" desc="查询角色道具列表应答" />
+    <macro name="IDIP_QUERY_ROLE_FRIEND_REQ"       value="0x1015" desc="查询角色好友信息请求" />
+    <macro name="IDIP_QUERY_ROLE_FRIEND_RSP"       value="0x1016" desc="查询角色好友信息应答" />
+    <macro name="IDIP_QUERY_ROLE_TASK_REQ"         value="0x100E" desc="查询角色任务请求" />
+    <macro name="IDIP_QUERY_ROLE_TASK_RSP"         value="0x100F" desc="查询角色任务应答" />
+    <macro name="IDIP_QUERY_BLACKLIST_REQ"         value="0x1027" desc="查询角色黑名单请求" />
+    <macro name="IDIP_QUERY_BLACKLIST_RSP"         value="0x1028" desc="查询角色黑名单应答" />
+    <macro name="IDIP_QUERY_PET_REQ"               value="0x101B" desc="查询玩家宠物信息请求" />
+    <macro name="IDIP_QUERY_PET_RSP"               value="0x101C" desc="查询玩家宠物信息应答" />
+    <macro name="IDIP_QUERY_PET_BODY_EQUIP_REQ"    value="0x1029" desc="查询宠物当前穿戴信息请求" />
+    <macro name="IDIP_QUERY_PET_BODY_EQUIP_RSP"    value="0x102A" desc="查询宠物当前穿戴信息应答" />
+    <macro name="IDIP_DO_ACTIVE_USR_REQ"           value="0x2001" desc="激活用户请求" />
+    <macro name="IDIP_DO_ACTIVE_USR_RSP"           value="0x2002" desc="激活用户应答" />
+    <macro name="IDIP_DO_UPDATE_MONEY_REQ"         value="0x2013" desc="更新角色货币信息请求" />
+    <macro name="IDIP_DO_UPDATE_MONEY_RSP"         value="0x2014" desc="更新角色货币信息应答" />
+    <macro name="IDIP_DO_SET_EXP_REQ"              value="0x2015" desc="修改经验请求" />
+    <macro name="IDIP_DO_SET_EXP_RSP"              value="0x2016" desc="修改经验应答" />
+    <macro name="IDIP_DO_SET_LEVEL_REQ"            value="0x2017" desc="修改等级请求" />
+    <macro name="IDIP_DO_SET_LEVEL_RSP"            value="0x2018" desc="修改等级应答" />
+    <macro name="IDIP_DO_SET_SKILL_LEVEL_REQ"      value="0x2019" desc="修改技能等级请求" />
+    <macro name="IDIP_DO_SET_SKILL_LEVEL_RSP"      value="0x201a" desc="修改技能等级应答" />
+    <macro name="IDIP_DO_SET_EQUIP_STRONG_LEVEL_REQ"      value="0x201b" desc="修改装备强化等级请求" />
+    <macro name="IDIP_DO_SET_EQUIP_STRONG_LEVEL_RSP"      value="0x201c" desc="修改装备强化等级应答" />
+    <macro name="IDIP_DO_SET_EQUIP_COMPOSE_LEVEL_REQ"     value="0x201d" desc="修改装备合成等级请求" />
+    <macro name="IDIP_DO_SET_EQUIP_COMPOSE_LEVEL_RSP"     value="0x201e" desc="修改装备合成等级应答" />
+    <macro name="IDIP_DO_SEND_SIMPLE_ITEM_REQ"     value="0x9003" desc="发送简单道具请求（ITEMID）" />
+    <macro name="IDIP_DO_SEND_SIMPLE_ITEM_RSP"     value="0x9004" desc="发送简单道具应答" />
+    <macro name="IDIP_DO_DEL_SIMPLE_ITEM_REQ"      value="0x9005" desc="删除简单道具请求(ITEMID)" />
+    <macro name="IDIP_DO_DEL_SIMPLE_ITEM_RSP"      value="0x9006" desc="删除简单道具应答" />
+    <macro name="IDIP_DO_SET_SERVER_STATE_REQ"     value="0x9007" desc="服务器状态配置请求" />
+    <macro name="IDIP_DO_SET_SERVER_STATE_RSP"     value="0x9008" desc="服务器状态配置应答" />
+    <macro name="IDIP_DO_SET_SERVER_ONOFF_REQ"     value="0x9009" desc="服务器开关请求" />
+    <macro name="IDIP_DO_SET_SERVER_ONOFF_RSP"     value="0x900a" desc="服务器开关应答" />
+    <macro name="IDIP_DO_SET_SYSTEM_INFO_REQ"      value="0x900b" desc="系统信息配置设置请求" />
+    <macro name="IDIP_DO_SET_SYSTEM_INFO_RSP"      value="0x900c" desc="系统信息配置设置应答" />
+    <macro name="IDIP_SET_EVENT_ONOFF_REQ"         value="0x900f" desc="活动功能开关请求" />
+    <macro name="IDIP_SET_EVENT_ONOFF_RSP"         value="0x9010" desc="活动功能开关应答" />
+    <macro name="IDIP_SET_SINGLE_EVENT_CONFIG_REQ" value="0x9011" desc="单独活动配置请求" />
+    <macro name="IDIP_SET_SINGLE_EVENT_CONFIG_RSP" value="0x9012" desc="单独活动配置应答" />
+    <macro name="IDIP_SET_EVENT_CONFIG_REQ"        value="0x9013" desc="活动配置请求" />
+    <macro name="IDIP_SET_EVENT_CONFIG_RSP"        value="0x9014" desc="活动配置应答" />
+    <macro name="IDIP_SET_DOUBLE_EXP_ONOFF_REQ"    value="0x9015" desc="双倍经验开关配置请求" />
+    <macro name="IDIP_SET_DOUBLE_EXP_ONOFF_RSP"    value="0x9016" desc="双倍经验开关配置应答" />
+    <macro name="IDIP_SET_COPY_ONOFF_REQ"          value="0x9017" desc="副本功能开关请求" />
+    <macro name="IDIP_SET_COPY_ONOFF_RSP"          value="0x9018" desc="副本功能开关应答" />
+    <macro name="IDIP_SET_SINGLE_COPY_ONOFF_REQ"   value="0x9019" desc="单独副本功能开关请求" />
+    <macro name="IDIP_SET_SINGLE_COPY_ONOFF_RSP"   value="0x901a" desc="单独副本功能开关应答" />
+    <macro name="IDIP_SET_EQUIP_STRONG_ONOFF_REQ"  value="0x901b" desc="装备强化功能开关请求" />
+    <macro name="IDIP_SET_EQUIP_STRONG_ONOFF_RSP"  value="0x901c" desc="装备强化功能开关应答" />
+    <macro name="IDIP_SET_LEARN_SKILL_ONOFF_REQ"   value="0x901d" desc="技能学习功能开关请求" />
+    <macro name="IDIP_SET_LEARN_SKILL_ONOFF_RSP"   value="0x901e" desc="技能学习功能开关应答" />
+    <macro name="IDIP_SET_PET_MIX_ONOFF_REQ"       value="0x901f" desc="宠物融合功能开关请求" />
+    <macro name="IDIP_SET_PET_MIX_ONOFF_RSP"       value="0x9020" desc="宠物融合功能开关应答" />
+    <macro name="IDIP_SET_TRADE_ONOFF_REQ"         value="0x9021" desc="交易功能开关请求" />
+    <macro name="IDIP_SET_TRADE_ONOFF_RSP"         value="0x9022" desc="交易功能开关应答" />
+    <macro name="IDIP_DO_SEND_PET_REQ"             value="0x9023" desc="赠送宠物请求" />
+    <macro name="IDIP_DO_SEND_PET_RSP"             value="0x9024" desc="赠送宠物应答" />
+    <macro name="IDIP_DO_DEL_PET_REQ"              value="0x9025" desc="删除宠物请求" />
+    <macro name="IDIP_DO_DEL_PET_RSP"              value="0x9026" desc="删除宠物应答" />
+    <macro name="IDIP_DO_KICKOFF_USR_REQ"          value="0x5005" desc="踢人请求"/>
+    <macro name="IDIP_DO_KICKOFF_USR_RSP"          value="0x5006" desc="踢人应答"/>
+    <macro name="IDIP_DO_BAN_USR_REQ"              value="0x5007" desc="封号请求"/>
+    <macro name="IDIP_DO_BAN_USR_RSP"              value="0x5008" desc="封号应答"/>
+    <macro name="IDIP_DO_MASK_CHAT_REQ"            value="0x5009" desc="禁言处理请求" />
+    <macro name="IDIP_DO_MASK_CHAT_RSP"            value="0x500a" desc="禁言处理应答" />
+    <macro name="IDIP_DO_UNBAN_USR_REQ"            value="0x500B" desc="解封请求"/>
+    <macro name="IDIP_DO_UNBAN_USR_RSP"            value="0x500C" desc="解封应答"/>
+    <macro name="IDIP_DO_UNMASK_CHAT_REQ"          value="0x500d" desc="解除禁言处理请求" />
+    <macro name="IDIP_DO_UNMASK_CHAT_RSP"          value="0x500e" desc="解除禁言处理应答" />
+    <macro name="IDIP_DO_SET_NOTICE_INFO_REQ"      value="0x5019" desc="编辑公告信息请求" />
+    <macro name="IDIP_DO_SET_NOTICE_INFO_RSP"      value="0x501a" desc="编辑公告信息应答" />
+    <macro name="IDIP_QUERY_ROLE_BAG_REQ"          value="0x500F" desc="查询角色背包信息请求"/>
+    <macro name="IDIP_QUERY_ROLE_BAG_RSP"          value="0x5010" desc="查询角色背包信息应答"/>
+    <macro name="IDIP_QUERY_SYSTEM_INFO_REQ"       value="0x5011" desc="获取系统信息配置请求"/>
+    <macro name="IDIP_QUERY_SYSTEM_INFO_RSP"       value="0x5012" desc="获取系统信息配置应答"/>
+    <macro name="IDIP_DO_SEND_TXTMAIL_REQ"         value="0x8001" desc="发送文本邮件请求" />
+    <macro name="IDIP_DO_SEND_TXTMAIL_RSP"         value="0x8002" desc="发送文本邮件应答" />
+    <macro name="IDIP_DO_SEND_MAIL_REQ"            value="0x8003" desc="发送带附件邮件请求（邮件发道具）" />
+    <macro name="IDIP_DO_SEND_MAIL_RSP"            value="0x8004" desc="发送带附件邮件应答" />
+    <macro name="IDIP_QUERY_ONLINE_NUM_REQ"        value="0x8005" desc="查询大区在线人数请求" />
+    <macro name="IDIP_QUERY_ONLINE_NUM_RSP"        value="0x8006" desc="查询大区在线人数应答" />
+    <macro name="IDIP_DO_DEL_BAGITEM_REQ"          value="0x8007" desc="删除角色背包道具请求" />
+    <macro name="IDIP_DO_DEL_BAGITEM_RSP"          value="0x8008" desc="删除角色背包道具应答" />
+    <macro name="IDIP_DO_DEL_STOREITEM_REQ"        value="0x8009" desc="删除角色仓库道具请求" />
+    <macro name="IDIP_DO_DEL_STOREITEM_RSP"        value="0x800a" desc="删除角色仓库道具应答" />
+    <macro name="IDIP_QUERY_ROLESKILL_REQ"         value="0x1009" desc="查询角色技能请求" />
+    <macro name="IDIP_QUERY_ROLESKILL_RSP"         value="0x100a" desc="查询角色技能应答" />
+    <macro name="IDIP_QUERY_ROLE_BODY_EQUIP_REQ"   value="0x100b" desc="查询角色装备信息请求" />
+    <macro name="IDIP_QUERY_ROLE_BODY_EQUIP_RSP"   value="0x100c" desc="查询角色装备信息应答" />
+    <macro name="IDIP_QUERY_ARMY_REQ"              value="0x1023" desc="查询家族信息请求" />
+    <macro name="IDIP_QUERY_ARMY_RSP"              value="0x1024" desc="查询家族信息应答" />
+    <macro name="IDIP_QUERY_ARMY_MEMBER_REQ"       value="0x1025" desc="查询家族成员信息请求" />
+    <macro name="IDIP_QUERY_ARMY_MEMBER_RSP"       value="0x1026" desc="查询家族成员信息应答" />
+    <macro name="IDIP_QUERY_BUY_RECORD_REQ"        value="0x1027" desc="查询商场购买记录请求" />
+    <macro name="IDIP_QUERY_BUY_RECORD_RSP"        value="0x1028" desc="查询商场购买记录应答" />
+  </macrosgroup>
+
+  <macrosgroup name="NET_MACRO" desc="系统宏" >
+    <macro name="IDIP_BODY_LENGTH"       value="24000" desc="封装包包体的最大值, 基本的数据包的大小在15K以下，只有查询邮件列表这个数据量比较大，在23K左右" />
+    <macro name="SERVICE_NAME_LENGTH"    value="16"    desc="SERVICENAME的最大长度" />
+    <macro name="AUTHENTICATE_LENGTH"    value="32"    desc="加密串的最大长度" />
+    <macro name="ERROR_MSG_LENGTH"       value="100"   desc="错误码" />
+    <macro name="MAX_ATTR_COUNT"         value="20"    desc="能力个数" />
+    <macro name="MAX_SKILL_COUNT"        value="50"    desc="技能个数" />
+    <macro name="MAX_TEAM_NAME_LEN"      value="64"    desc="球队名称长度" />
+    <macro name="MAX_SKILL_NAME_LEN"     value="64"    desc="技能名称长度" />
+    <macro name="MAX_EQUIP_COUNT"        value="100"   desc="装备数量" />
+    <macro name="MAX_ITME_NAME_LEN"      value="80"    desc="道具名称长度" />
+    <macro name="MAX_TASK_COUNT"         value="80"    desc="任务信息个数" />
+    <macro name="MAX_TASK_NAME_LEN"      value="80"    desc="任务名称长度" />
+    <macro name="MAX_BAG_ITEM_COUNT"     value="200"   desc="背包道具个数" />
+    <macro name="MAX_IDIP_PET_COUNT"     value="20"    desc="宠物个数" />
+    <macro name="MAX_MODE_MATCH_COUNT"   value="10"    desc="模式个数" />
+    <macro name="MAX_RET_MSG_LENGTH"     value="100"   desc="返回信息的长度" />
+    <macro name="MAX_BOARD_CAST_COUNT"   value="10"    desc="公告数量" />
+    <macro name="MAX_BOARD_MSG_LEN"      value="200"   desc="公告内容长度" />
+    <macro name="MAX_DEL_BAG_ITEM_COUNT" value="32"    desc="删除道具信息个数" />
+    <macro name="MAX_SHOP_FITMENT_COUNT" value="80"    desc="店面道具数量" />
+    <macro name="MAX_PARTY_COUNT"        value="80"    desc="实时派对数量" />
+    <macro name="MAX_PARTYER_COUNT"      value="200"   desc="参加派对玩家" />
+    <macro name="MAX_ITEM_NAME_LEN"      value="64"    desc="道具名称长度" />
+    <macro name="MAX_FITMENT_NAME_LEN"   value="64"    desc="家具名称长度" />
+    <macro name="MAX_DRESS_COUNT"        value="64"    desc="打扮ID个数" />
+    <macro name="MAX_SIMPLE_ITEM_COUNT"  value="400"   desc="道具数量" />
+    <macro name="MAX_FRIEND_COUNT"       value="400"   desc="好友数量" />
+    <macro name="MAX_MONEY_LIST_NUM"     value="20"    desc="金钱列表最大数" />
+    <macro name="MAX_BLACK_COUNT"        value="400"   desc="黑名单数量" />
+    <macro name="MAX_EQUIP_INFO_LENGTH"  value="200"   desc="装备的长度" />
+    <macro name="MAX_PET_NAME_LEN"       value="32"    desc="宠物名长度" />
+    <macro name="MAX_PET_EQUIP_NUM"      value="50"    desc="宠物穿戴装备数量" />
+    <macro name="MAX_REMARK_LENGTH"      value="32"    desc="流水号最大长度" />
+    <macro name="MAX_DESC_LENGTH"        value="32"    desc="描述信息" />
+    <macro name="MAX_MAIL_SUBJECT"       value="128"   desc="邮件标题" />
+    <macro name="MAX_MAIL_TEXT"          value="1024"  desc="邮件正文" />
+    <macro name="MAX_ACCESSOBJ_NUM"      value="5"     desc="附件个数" />
+    <macro name="MAX_NOTICE_CONTENT_LEN" value="500"   desc="公告最大长度" />
+    <macro name="MAX_VERSION_LEN"        value="64"    desc="角色所在游戏版本字符串长度" />
+    <macro name="ROLE_NAME_LENGTH"       value="64"    desc="角色名长度" />
+    <macro name="MAX_ROLE_NUM"           value="10"    desc="最大角色数量" />
+    <macro name="MAX_BAG_PAGE_COUNT"     value="50"    desc="背包中的道具数量" />
+    <macro name="MAX_ROLE_SKILL_NUM"     value="100"   desc="角色最大技能数" />
+    <macro name="MAX_EQUIP_NUM"          value="50"    desc="穿戴装备数量" />
+    <macro name="MAX_ARMY_MEMBER_COUNT"  value="200"   desc="团队成员最大个数" />
+  </macrosgroup>
+
+  <struct name="IdipHeader"    desc="IDIP消息头">
+    <entry name="PacketLen"    type="uint32" desc="包长" />
+    <entry name="Cmdid"        type="uint32" desc="命令ID" />
+    <entry name="Seqid"        type="uint32" desc="流水号" />
+    <entry name="ServiceName"  type="string" size="SERVICE_NAME_LENGTH" desc="服务名" />
+    <entry name="SendTime"     type="uint32" desc="发送时间YYYYMMDD对应的整数" />
+    <entry name="Version"      type="uint32" desc="版本号" />
+    <entry name="Authenticate" type="string" size="AUTHENTICATE_LENGTH" desc="加密串" />
+    <entry name="Result"       type="uint32" desc="错误码" />
+    <entry name="RetErrMsg"    type="string" size="ERROR_MSG_LENGTH"    desc="错误信息" />
+  </struct>
+
+  <struct name="IdipDataPaket" desc="IDIP数据包">
+    <entry name="IdipHead"     type="IdipHeader" desc="包头信息" />
+    <entry name="IdipBody"     type="string" size="IDIP_BODY_LENGTH"    desc="包体信息" />
+  </struct>
+
+  <struct name="SRoleIndexMsg" desc="角色结构对象">
+    <entry name="RoleId"    type="uint32" desc="角色ID" />
+    <entry name="RoleName"  type="string" size="ROLE_NAME_LENGTH" desc="角色名称" />
+  </struct>
+    
+  <struct name="SItemInfo" desc="道具信息对象">
+      <entry name="Type"     type="uint8" desc="物品类型" />
+      <entry name="UniqueID"     type="uint64" desc="物品唯一标识" />
+      <entry name="ItemCount"  type="uint16" desc="道具数量" />
+      <entry name="ItemId"     type="uint32" desc="道具ID" />
+      <entry name="ItemName"   type="string" size="ROLE_NAME_LENGTH" desc="道具名称" />
+  </struct>
+  
+  <struct name="SEquipInfo" desc="装备信息对象">
+      <entry name="BodyPos"    type="uint16" desc="装备位置" />
+      <entry name="EquipId"    type="uint32" desc="装备ID" />
+      <entry name="EquipInfo"   type="string" size="MAX_EQUIP_INFO_LENGTH" desc="装备信息" />
+  </struct>
+  
+  <struct name="SArmyInfo" desc="家族信息对象">
+      <entry name="Top"     type="uint32" desc="排名" />
+      <entry name="Name"   type="string" size="ROLE_NAME_LENGTH" desc="家族名称" />
+      <entry name="Leader"   type="string" size="ROLE_NAME_LENGTH" desc="家族首领" />
+      <entry name="Count"     type="uint32" desc="家族人数" />
+      <entry name="Strength"     type="uint32" desc="家族实力" />
+      <entry name="Level"     type="uint32" desc="家族等级" />
+  </struct>
+
+  <struct name="SArmyMemberInfo" desc="家族成员信息">
+      <entry name="Name"   type="string" size="ROLE_NAME_LENGTH" desc="成员名称" />
+      <entry name="Level"     type="uint16" desc="成员等级" />
+      <entry name="Work"     type="uint16" desc="家族成员职业" />
+      <entry name="Duty"     type="uint16" desc="家族成员职务" />
+  </struct>
+
+  <struct name="SRoleSkill" desc="技能结构对象">
+      <entry name="SkillId"    type="uint32" desc="技能ID" />
+      <entry name="SkillType" type="uint8" desc="职业" />
+      <entry name="SkillName"  type="string" size="MAX_SKILL_NAME_LEN" desc="技能名称" />
+      <entry name="SkillLevel" type="uint16" desc="技能等级"/>
+  </struct>
+
+    <struct name="SRoleFriendInfo" desc="好友信息对象">
+        <entry name="Uin"      type="uint32" desc="好友号码" />
+        <entry name="szName"     type="string" size="ROLE_NAME_LENGTH" desc="好友名称" />
+        <entry name="Work" type="uint8" desc="职业" />
+        <entry name="Status"  type="uint32" desc="角色状态" />
+        <entry name="Level"    type="uint16" desc="好友等级" />
+    </struct>
+    
+   <struct name="SBuyRecord" desc="购买记录">
+        <entry name="ItemId"      type="uint32" desc="购买物品ID" />
+        <entry name="NickName"     type="string" size="ROLE_NAME_LENGTH" desc="物品名称" />
+        <entry name="Type" type="uint8" desc="类型" />
+        <entry name="Count"  type="uint32" desc="数量" />
+        <entry name="Price"    type="uint16" desc="价格" />
+        <entry name="Time"    type="uint32" desc="购买时间" />
+    </struct>
+
+    <!-- 查询激活用户请求 -->
+  <struct name="QueryActiveUserReq" id="IDIP_QUERY_ACTIVE_REQ" desc="查询激活用户请求">
+    <entry name="Uin"     type="uint32" desc="用户QQ号" />
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+  </struct>
+
+  <struct name="QueryActiveUserRsp" id="IDIP_QUERY_ACTIVE_RSP" desc="查询激活用户应答">
+    <entry name="Result"      type="int32"  desc="操作结果：0-已激活，1-未激活，负数为操作失败" />
+    <entry name="Uin"         type="uint32" desc="用户QQ号" />
+    <entry name="ActiveTime"  type="uint32" desc="激活时间" />
+  </struct>
+
+    <!-- 获取系统信息配置请求 -->
+  <struct name="QuerySystemInfoReq" id="IDIP_QUERY_SYSTEM_INFO_REQ" desc="获取系统信息配置请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+  </struct>
+
+  <struct name="QuerySystemInfoRsp" id="IDIP_QUERY_SYSTEM_INFO_RSP" desc="获取系统信息配置应答">
+    <entry name="Online"     type="uint32"                          desc="最高在线人数" />
+    <entry name="Registered"     type="uint32"                          desc="最高注册人数" />
+    <entry name="Standed"      type="uint32"                           desc="最高排队人数" />
+  </struct>
+
+    <!-- 激活用户 -->
+  <struct name="ActiveUsrReq" id="IDIP_DO_ACTIVE_USR_REQ" desc="激活用户请求">
+    <entry name="Uin" type="uint32" desc="用户QQ号" />
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+  </struct>
+
+  <struct name="ActiveUsrRsp" id="IDIP_DO_ACTIVE_USR_RSP" desc="激活用户应答">
+    <entry name="Result" type="int32" desc="激活结果, 0 激活成功 1 已经激活过" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 服务器状态配置 -->
+  <struct name="SetServerStateReq" id="IDIP_DO_SET_SERVER_STATE_REQ" desc="服务器状态配置请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="State" type="int32" desc="服务器状态（1 新开服务器, 2 推荐服务器）" />
+  </struct>
+
+  <struct name="SetServerStateRsp" id="IDIP_DO_SET_SERVER_STATE_RSP" desc="服务器状态配置应答">
+    <entry name="State" type="int32" desc="服务器状态（1 新开服务器, 2 推荐服务器）" />
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 服务器开关 -->
+  <struct name="SetServerOnOffReq" id="IDIP_DO_SET_SERVER_ONOFF_REQ" desc="服务器开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetServerOnOffRsp" id="IDIP_DO_SET_SERVER_ONOFF_RSP" desc="服务器开关应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 系统信息配置设置 -->
+  <struct name="DoSetSystemInfoReq" id="IDIP_DO_SET_SYSTEM_INFO_REQ" desc="系统信息配置设置请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="Online"     type="uint32"                          desc="最高在线人数" />
+    <entry name="Registered"     type="uint32"                          desc="最高注册人数" />
+    <entry name="Standed"      type="uint32"                           desc="最高排队人数" />
+  </struct>
+
+  <struct name="DoSetSystemInfoRsp" id="IDIP_DO_SET_SYSTEM_INFO_RSP" desc="系统信息配置设置应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 编辑公告信息 -->
+  <struct name="DoSetNoticeInfoReq" id="IDIP_DO_SET_NOTICE_INFO_REQ" desc="编辑公告信息请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="Location" type="int32" desc="展示位置（1 聊天框, 2 滚动条）" />
+    <entry name="Color" type="int32" desc="文字颜色，值由研发方定义" />
+    <entry name="Send" type="int32" desc="是否发送 （0 否，1 是）" />
+    <entry name="NoticeContent"      type="string"   size="MAX_NOTICE_CONTENT_LEN" desc="公告内容" />
+  </struct>
+
+  <struct name="DoSetNoticeInfoRsp" id="IDIP_DO_SET_NOTICE_INFO_RSP" desc="编辑公告信息应答">
+    <entry name="Location" type="int32" desc="展示位置（1 聊天框, 2 滚动条）" />
+    <entry name="NoticeContent"      type="string"   size="MAX_NOTICE_CONTENT_LEN" desc="公告内容" />
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+<!-- 活动功能开关 -->
+  <struct name="SetEventOnOffReq" id="IDIP_SET_EVENT_ONOFF_REQ" desc="活动功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetEventOnOffRsp" id="IDIP_SET_EVENT_ONOFF_RSP" desc="活动功能开关应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+  <!-- 单独活动配置 -->
+  <struct name="SetSingleEventConfigReq" id="IDIP_SET_SINGLE_EVENT_CONFIG_REQ" desc="单独活动配置请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+    <entry name="Id" type="uint32" desc="所在世界ID" />
+  </struct>
+
+  <struct name="SetSingleEventConfigRsp" id="IDIP_SET_SINGLE_EVENT_CONFIG_RSP" desc="单独活动配置应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+  <!-- 活动配置 -->
+  <struct name="SetEventConfigReq" id="IDIP_SET_EVENT_CONFIG_REQ" desc="活动配置请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+    <entry name="Id" type="uint32" desc="活动ID" />
+    <entry name="StartTime" type="uint32" desc="开始时间" />
+    <entry name="EndTime" type="uint32" desc="结束时间" />
+  </struct>
+
+  <struct name="SetEventConfigRsp" id="IDIP_SET_EVENT_CONFIG_RSP" desc="活动配置应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+  <!-- 双倍经验开关配置 -->
+  <struct name="SetDoubleExpOnOffReq" id="IDIP_SET_DOUBLE_EXP_ONOFF_REQ" desc="双倍经验开关配置请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetDoubleExpOnOffRsp" id="IDIP_SET_DOUBLE_EXP_ONOFF_RSP" desc="双倍经验开关配置应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+  <!-- 副本功能开关 -->
+  <struct name="SetCopyOnOffReq" id="IDIP_SET_COPY_ONOFF_REQ" desc="副本功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetCopyOnOffRsp" id="IDIP_SET_COPY_ONOFF_RSP" desc="副本功能开关应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 单独副本功能开关 -->
+  <struct name="SetSingleCoypOnOffReq" id="IDIP_SET_SINGLE_COPY_ONOFF_REQ" desc="单独副本功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+    <entry name="Id" type="uint32" desc="副本ID" />
+  </struct>
+
+  <struct name="SetSingleCoypOnOffRsp" id="IDIP_SET_SINGLE_COPY_ONOFF_RSP" desc="单独副本功能开关应答">
+    <entry name="Result" type="int32" desc="结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 装备强化功能开关 -->
+  <struct name="SetEquipStrongOnOffReq" id="IDIP_SET_EQUIP_STRONG_ONOFF_REQ" desc="装备强化功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetEquipStrongOnOffRsp" id="IDIP_SET_EQUIP_STRONG_ONOFF_RSP" desc="装备强化功能开关应答">
+     <entry name="Result"  type="int32" desc="结果" />
+     <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 技能学习功能开关 -->
+  <struct name="SetLearnSkillOnOffReq" id="IDIP_SET_LEARN_SKILL_ONOFF_REQ" desc="技能学习功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetLearnSkillOnOffRsp" id="IDIP_SET_LEARN_SKILL_ONOFF_RSP" desc="技能学习功能开关应答">
+    <entry name="Result" type="int32" desc="操作结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 宠物融合功能开关 -->
+  <struct name="SetPetMixOnOffReq" id="IDIP_SET_PET_MIX_ONOFF_REQ" desc="宠物融合功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetPetMixOnOffRsp" id="IDIP_SET_PET_MIX_ONOFF_RSP" desc="宠物融合功能开关应答">
+    <entry name="Result" type="int32" desc="操作结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+    <!-- 交易功能开关 -->
+  <struct name="SetTradeOnOffReq" id="IDIP_SET_TRADE_ONOFF_REQ" desc="交易功能开关请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    <entry name="On" type="int32" desc="开关（1 开, 0 关）" />
+  </struct>
+
+  <struct name="SetTradeOnOffRsp" id="IDIP_SET_TRADE_ONOFF_RSP" desc="交易功能开关应答">
+    <entry name="Result" type="int32" desc="操作结果" />
+    <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+  </struct>
+
+  <!-- 查询大区在线人数 -->
+  <struct name="QueryOnlineNumReq" id="IDIP_QUERY_ONLINE_NUM_REQ" desc="查询大区在线人数请求">
+    <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+    <entry name="WorldId" type="uint32" desc="所在世界ID" />
+  </struct>
+
+  <struct name="QueryOnlineNumRsp" id="IDIP_QUERY_ONLINE_NUM_RSP" desc="查询大区在线人数应答">
+    <entry name="Online" type="uint32" desc="当前在线人数" />
+    <entry name="RegNum" type="uint32" desc="当前注册人数" />
+  </struct>
+  
+    <!-- 踢用户下线 -->
+    <struct name="SDoRoleKickoffReq" id="IDIP_DO_KICKOFF_USR_REQ" desc="踢用户下线请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    </struct>
+
+    <struct name="SDoRoleKickoffRsp" id="IDIP_DO_KICKOFF_USR_RSP" desc="踢用户下线应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+    
+    <!-- 禁言处理 -->
+    <struct name="SDoMaskChatReq" id="IDIP_DO_MASK_CHAT_REQ" desc="禁言处理请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="RoleId"  type="uint32" desc="角色id" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="MaskEndTime" type="uint32" desc="禁言时长（小时）" />
+    </struct>
+
+    <struct name="SDoMaskChatRsp" id="IDIP_DO_MASK_CHAT_RSP" desc="禁言处理应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 封号处理 -->
+    <struct name="SDoBanUsrReq" id="IDIP_DO_BAN_USR_REQ" desc="封号处理请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="BanEndTime" type="uint32" desc="封号时长（小时）,默认先踢下线再执行封号" />
+    </struct>
+
+    <struct name="SDoBanUsrRsp" id="IDIP_DO_BAN_USR_RSP" desc="封号处理应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 解除封号处理 -->
+    <struct name="SDoUnBanUsrReq" id="IDIP_DO_UNBAN_USR_REQ" desc="解除封号处理请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    </struct>
+
+    <struct name="SDoUnBanUsrRsp" id="IDIP_DO_UNBAN_USR_RSP" desc="解除封号处理应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 解除禁言处理 -->
+    <struct name="SDoUnMaskChatReq" id="IDIP_DO_UNMASK_CHAT_REQ" desc="解除禁言处理请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId"  type="uint32" desc="角色id" />
+    </struct>
+
+    <struct name="SDoUnMaskChatRsp" id="IDIP_DO_UNMASK_CHAT_RSP" desc="解除禁言处理应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+    
+    <!-- 修改金币 -->
+    <struct name="SDoUpdateMoneyReq" id="IDIP_DO_UPDATE_MONEY_REQ" desc="设置玩家仓库钱数请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="MoneyCount" type="int32" desc="正加负减" />
+    </struct>
+
+    <struct name="SDoUpdateMoneyRsp" id="IDIP_DO_UPDATE_MONEY_RSP" desc="设置玩家仓库钱数应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 修改点券 -->
+    <struct name="SDoUpdateCashReq" id="IDIP_DO_UPDATE_CASH_REQ" desc="修改点券请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="RoleId"     type="uint32" desc="充值到角色id" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="Source"     type="uint16" desc="充值渠道:101 Q币,102 Q点,103 网银,104 财付通,105 esales, 106 Q币卡, 107 业务受理,108 专用赠送渠道,109 管理端充值，多用于批量" />
+        <entry name="Amount"     type="int32"    desc="金额，单位为点券单位，建议为分，1QB=100分,正加负减" />
+    </struct>
+
+    <struct name="SDoUpdateCashRsp" id="IDIP_DO_UPDATE_CASH_RSP" desc="充值代币应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 修改经验 -->
+    <struct name="SDoSetExpReq" id="IDIP_DO_SET_EXP_REQ" desc="修改经验请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Value" type="int32" desc="变化值,正加负减" />
+    </struct>
+
+    <struct name="SDoSetExpRsp" id="IDIP_DO_SET_EXP_RSP" desc="修改经验应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="CurrValue" type="int32" desc="当前值" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 修改等级 -->
+    <struct name="SDoSetLevelReq" id="IDIP_DO_SET_LEVEL_REQ" desc="修改等级请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Value" type="int32" desc="变化值,正加负减" />
+    </struct>
+
+    <struct name="SDoSetLevelRsp" id="IDIP_DO_SET_LEVEL_RSP" desc="修改等级应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="CurrValue" type="int32" desc="当前值" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 修改技能等级 -->
+    <struct name="SDoSetSkillLevelReq" id="IDIP_DO_SET_SKILL_LEVEL_REQ" desc="修改技能等级请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Value" type="int32" desc="变化值,正加负减" />
+        <entry name="ItemId" type="int32" desc="ID" />
+    </struct>
+
+    <struct name="SDoSetSkillLevelRsp" id="IDIP_DO_SET_SKILL_LEVEL_RSP" desc="修改技能等级应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="CurrValue" type="int32" desc="当前值" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 修改装备强化等级 -->
+    <struct name="SDoSetEquipStrongLevelReq" id="IDIP_DO_SET_EQUIP_STRONG_LEVEL_REQ" desc="修改装备强化等级请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Value" type="int32" desc="变化值,正加负减" />
+        <entry name="ItemId" type="int32" desc="ID" />
+    </struct>
+
+    <struct name="SDoSetEquipStrongLevelRsp" id="IDIP_DO_SET_EQUIP_STRONG_LEVEL_RSP" desc="修改装备强化等级应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="CurrValue" type="int32" desc="当前值" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 修改装备合成等级 -->
+    <struct name="SDoSetEquipComposeLevelReq" id="IDIP_DO_SET_EQUIP_COMPOSE_LEVEL_REQ" desc="修改装备合成等级请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Value" type="int32" desc="变化值,正加负减" />
+        <entry name="ItemId" type="int32" desc="ID" />
+    </struct>
+
+    <struct name="SDoSetEquipComposeLevelRsp" id="IDIP_DO_SET_EQUIP_COMPOSE_LEVEL_RSP" desc="修改装备合成等级应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="CurrValue" type="int32" desc="当前值" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 删除背包中道具请求 -->
+    <struct name="SDoDelBagItemReq" id="IDIP_DO_DEL_BAGITEM_REQ" desc="删除背包中道具请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Count"   type="uint32" desc="删除道具数量" />
+        <entry name="ItemId" type="int32" desc="ID" />
+    </struct>
+
+    <struct name="SDoDelBagItemRsp" id="IDIP_DO_DEL_BAGITEM_RSP" desc="删除背包中道具应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 删除仓库中道具 -->
+    <struct name="SDoDelStoreItemReq" id="IDIP_DO_DEL_STOREITEM_REQ" desc="删除仓库中道具请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Count"   type="uint32" desc="删除道具数量" />
+        <entry name="ItemId" type="int32" desc="ID" />
+    </struct>
+
+    <struct name="SDoDelStoreItemRsp" id="IDIP_DO_DEL_STOREITEM_RSP" desc="删除仓库中道具应答">
+        <entry name="Result" type="int32" desc="结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 发送道具 -->
+    <struct name="SDoSendSimpleItemReq" id="IDIP_DO_SEND_SIMPLE_ITEM_REQ" desc="发送道具请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="ItemId" type="uint32" desc="ID" />
+        <entry name="Count" type="uint32" desc="数量" />
+        <entry name="Type" type="uint32" desc="类型,1、装备 2、消耗 3、材料 4、家园 5、宝石" />
+    </struct>
+
+    <struct name="SDoSendSimpleItemRsp" id="IDIP_DO_SEND_SIMPLE_ITEM_RSP" desc="发送道具应答">
+        <entry name="Result" type="int32" desc="操作结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 赠送宠物 -->
+    <struct name="SDoSendPetReq" id="IDIP_DO_SEND_PET_REQ" desc="发送宠物请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="ItemId" type="uint32" desc="ID" />
+        <entry name="Count" type="uint32" desc="数量" />
+    </struct>
+
+    <struct name="SDoSendPetRsp" id="IDIP_DO_SEND_PET_RSP" desc="发送宠物应答">
+        <entry name="Result" type="int32" desc="操作结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 删除宠物 -->
+    <struct name="SDoDelPetReq" id="IDIP_DO_DEL_PET_REQ" desc="删除宠物请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="ItemId" type="uint32" desc="ID" />
+        <entry name="Count" type="uint32" desc="数量" />
+    </struct>
+
+    <struct name="SDoDelPetRsp" id="IDIP_DO_DEL_PET_RSP" desc="删除宠物应答">
+        <entry name="Result" type="int32" desc="操作结果" />
+        <entry name="RetMsg" type="string" size="MAX_RET_MSG_LENGTH" desc="返回消息" />
+    </struct>
+
+    <!-- 查询角色列表 -->
+    <struct name="SGetRoleListReq" id="IDIP_QUERY_ROLELIST_REQ" desc="查询角色列表请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+    </struct>
+
+    <struct name="SGetRoleListRsp" id="IDIP_QUERY_ROLELIST_RSP" desc="查询角色列表应答">
+        <entry name="Uin"        type="uint32" desc="用户QQ号" />
+        <entry name="ucRoleCount"     type="uint8" desc="角色数量" />
+        <entry name="vecRoleListMsg" type="SRoleIndexMsg" size="MAX_ROLE_NUM" param="vector,struct,ucRoleCount,1,|, " desc="角色的列表信息 最大20个角色名" />
+    </struct>
+
+    <!-- 查询角色基本信息 -->
+    <struct name="SGetRoleBaseInfoReq" id="IDIP_QUERY_ROLEBASEINFO_REQ" desc="查询角色基本信息请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+    </struct>
+
+    <struct name="SGetRoleBaseInfoRsp" id="IDIP_QUERY_ROLEBASEINFO_RSP" desc="查询角色基本信息应答">
+        <entry name="NickName"           type="string"   size="ROLE_NAME_LENGTH"      desc="昵称" />
+        <entry name="hp"                 type="uint32"                                desc="生命值" />
+        <entry name="mp"                 type="uint32"                                desc="法力值" />
+        <entry name="mastery"            type="uint32"                                desc="熟练度" />
+        <entry name="crtRate"            type="uint32"                                desc="暴击率" />
+        <entry name="exp"                type="uint32"                                desc="经验值" />
+        <entry name="phyAtk"             type="uint32"                                desc="物理攻击" />
+        <entry name="phyDef"             type="uint32"                                desc="物理防御" />
+        <entry name="macAtk"             type="uint32"                                desc="魔法攻击" />
+        <entry name="macDef"             type="uint32"                                desc="魔法防御" />
+        <entry name="phyAcc"             type="uint32"                                desc="物理命中" />
+        <entry name="macAcc"             type="uint16"                                desc="魔法命中" />
+        <entry name="phyDodge"           type="uint32"                                desc="物理回避" />
+        <entry name="macDodge"           type="uint32"                                desc="魔法回避" />
+        <entry name="poir"               type="uint32"                                desc="风抗性" />
+        <entry name="thunder"            type="uint32"                                desc="雷抗性" />
+        <entry name="icer"               type="uint32"                                desc="冰抗性" />
+        <entry name="firer"              type="uint32"                                desc="火抗性" />
+        <entry name="darkr"              type="uint32"                                desc="暗抗性" />
+        <entry name="holyr"              type="uint32"                                desc="圣抗性" />
+        <entry name="seal"               type="uint32"                                desc="封印抗性" />
+        <entry name="root"               type="uint32"                                desc="定身抗性" />
+        <entry name="curse"              type="uint32"                                desc="诅咒抗性" />
+        <entry name="deceleration"       type="uint32"                                desc="减速抗性" />
+        <entry name="frozen"             type="uint32"                                desc="冰冻抗性" />
+        <entry name="stun"               type="uint32"                                desc="眩晕抗性" />
+        <entry name="str"                type="uint32"                                desc="力量" />
+        <entry name="con"                type="uint32"                                desc="体质" />
+        <entry name="dex"                type="uint32"                                desc="敏捷" />
+        <entry name="intl"               type="uint32"                                desc="智力" />
+        <entry name="profession"         type="uint32"                                desc="角色类型" />
+        <entry name="proppoint"          type="uint32"                                desc="潜力点" />
+        <entry name="status"             type="uint32"                                desc="当前状态" />
+        <entry name="vitality"           type="uint32"                                desc="精力值" />
+        <entry name="castlevel"          type="uint32"                                desc="铸造精通等级" />
+        <entry name="pharmacistlevel"    type="uint32"                                desc="药水精通等级" />
+        <entry name="regtime"            type="uint32"                                desc="注册时间" />
+        <entry name="accforbidhistory"   type="uint32"                                desc="历史封号记录" />
+        <entry name="talkforbidhistory"  type="uint32"                                desc="历史禁言记录" />
+    </struct>
+
+    <!-- 查询角色背包信息请求 -->
+    <struct name="SGetRoleBagReq" id="IDIP_QUERY_ROLE_BAG_REQ" desc="查询角色背包信息请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="PageSize"  type="uint16" desc="页面大小,表示每页有多少条数据," />
+        <entry name="PageNo"  type="uint8" desc="页号,从0开始" />
+    </struct>
+    
+    <!-- 查询角色背包信息应答 -->
+    <struct name="SGetRoleBagRsp" id="IDIP_QUERY_ROLE_BAG_RSP" desc="查询角色背包信息应答">
+        <entry name="BagItemCount" type="uint32" desc="当前页道具个数" />
+        <entry name="PageNo"  type="uint8" desc="页号,从0开始" />
+        <entry name="pBagItemList"  type="SItemInfo" size="MAX_BAG_PAGE_COUNT" param="vector,struct,BagItemCount,1,|, " desc="道具列表" />
+    </struct>
+
+    <!-- 查询角色技能请求 -->
+    <struct name="SGetRoleSkillReq" id="IDIP_QUERY_ROLESKILL_REQ" desc="查询角色技能请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="RoleName"      type="string"   size="ROLE_NAME_LENGTH" desc="角色名" />
+    </struct>
+
+    <!-- 查询角色技能应答 -->
+    <struct name="SGetRoleSkillRsp" id="IDIP_QUERY_ROLESKILL_RSP" desc="查询角色技能应答">
+        <entry name="SkillCount" type="uint16" desc="技能数量" />
+        <entry name="vecSkillList"  type="SRoleSkill" size="MAX_ROLE_SKILL_NUM" param="vector,struct,SkillCount,1,|, " desc="技能列表" />
+    </struct>
+
+    <!-- 查询角色装备请求 -->
+    <struct name="SGetRoleBodyEquipReq" id="IDIP_QUERY_ROLE_BODY_EQUIP_REQ" desc="查询角色装备信息请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+    </struct>
+
+    <!-- 查询角色装备请求 -->
+    <struct name="SGetRoleBodyEquipRsp" id="IDIP_QUERY_ROLE_BODY_EQUIP_RSP" desc="查询角色装备信息应答">
+        <entry name="EquipCount"    type="uint32" desc="装备数量" />
+        <entry name="pBodyEquipInfo" type="SEquipInfo" size="MAX_EQUIP_NUM" param="vector,struct,EquipCount,1,|, " desc="装备信息" />
+    </struct>
+    
+    <!-- 查询家族信息 -->
+    <struct name="SQueryArmyReq" id="IDIP_QUERY_ARMY_REQ" desc="查询家族信息请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="ArmyId" type="uint32" desc="家族ID" />
+    </struct>
+
+    <struct name="SQueryArmyRsp" id="IDIP_QUERY_ARMY_RSP" desc="查询家族信息应答">
+        <entry name="ArmyInfo"  type="SArmyInfo" param="struct,1, " desc="家族信息" />
+    </struct>
+
+    <!-- 查询家族成员信息 -->
+    <struct name="SQueryArmyMemberReq" id="IDIP_QUERY_ARMY_MEMBER_REQ" desc="查询家族成员信息请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="ArmyId" type="uint32" desc="家族ID" />
+        <entry name="PageSize"  type="uint16" desc="页面大小,表示每页有多少条数据," />
+        <entry name="PageNo"  type="uint8" desc="页号,从0开始" />
+    </struct>
+
+    <struct name="SQueryArmyMemberRsp" id="IDIP_QUERY_ARMY_MEMBER_RSP" desc="查询家族成员信息应答">
+        <entry name="Count" type="uint16" desc="家族成员个数" />
+        <entry name="PageNo" type="uint8" desc="页码" />
+        <entry name="ArmyMemberList"  type="SArmyMemberInfo" size="MAX_ARMY_MEMBER_COUNT" param="vector,struct,Count,1,|, " desc="家族信息" />
+    </struct>
+
+    <!-- 查询角色好友信息请求 -->
+    <struct name="SGetRoleFriendReq" id="IDIP_QUERY_ROLE_FRIEND_REQ" desc="查询角色好友信息请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="PageSize"  type="uint16" desc="页面大小,表示每页有多少条数据," />
+        <entry name="PageNo"  type="uint8" desc="页号,从0开始" />
+    </struct>
+    
+    <!-- 查询角色好友信息应答 -->
+    <struct name="SGetRoleFriendRsp" id="IDIP_QUERY_ROLE_FRIEND_RSP" desc="查询角色好友信息应答">
+        <entry name="PageNo" type="uint8" desc="页码" />
+        <entry name="Count"        type="uint32" desc="好友数量" />
+        <entry name="FriendList"  type="SRoleFriendInfo" size="MAX_FRIEND_COUNT" param="vector,struct,Count,1,|, " desc="好友列表" />
+    </struct>
+
+    <!-- 查询商场购买记录请求 -->
+    <struct name="SQueryBuyRecordReq" id="IDIP_QUERY_BUY_RECORD_REQ" desc="查询商场购买记录请求">
+        <entry name="Uin"     type="uint32" desc="用户QQ号" />
+        <entry name="AreaId"  type="uint32" desc="所在大区ID" />
+        <entry name="WorldId" type="uint32" desc="所在世界ID" />
+        <entry name="RoleId" type="uint32" desc="角色ID" />
+        <entry name="Time" type="uint32" desc="购买时间" />
+        <entry name="PageSize"  type="uint16" desc="页面大小,表示每页有多少条数据," />
+        <entry name="PageNo"  type="uint8" desc="页号,从0开始" />
+    </struct>
+    
+    <!-- 查询商场购买记录应答 -->
+    <struct name="SQueryBuyRecordRsp" id="IDIP_QUERY_BUY_RECORD_RSP" desc="查询商场购买记录应答">
+        <entry name="PageNo" type="uint8" desc="页码" />
+        <entry name="Count"        type="uint32" desc="记录数量" />
+        <entry name="BuyList"  type="SBuyRecord" size="MAX_FRIEND_COUNT" param="vector,struct,Count,1,|, " desc="列表" />
+    </struct>
+
+</metalib>

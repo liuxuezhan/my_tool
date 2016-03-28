@@ -1,0 +1,66 @@
+#!/bin/bash
+
+LOGFILE=./watchdog_process.log
+CONFG_FILE=gserver1.0.conf
+SERVS[0]=" "
+PATHVS[0]=""
+SERVS_NUM=0
+
+
+function  protect()
+{
+	SPID=`pidof $1`
+	if [ -z $SPID ]
+	then
+		cd  $2
+		RETIME=`date "+%Y-%m-%d %H:%M:%S"`
+		echo  $RETIME the $1 process is not exist restart....>>$LOGFILE
+		chmod +x $1
+		ulimit -c unlimited
+		nohup $1 >/dev/null 2>&1 &  
+		cd -
+		else
+		RETIME=`date "+%Y-%m-%d %H:%M:%S"`
+		#echo $RETIME the $1 [$SPID]process is runing......
+	fi
+}
+
+########################################################################
+#
+#  main function
+######################################################################
+
+if [ ! -f "$CONFG_FILE" ]
+then
+  echo please provide the config file $CONFG_FILE
+  exit 1
+fi
+
+while read LINE
+do
+    SERVS[$SERVS_NUM]=`echo $LINE`
+    PATHVS[$SERVS_NUM]=`echo $LINE | awk 'BEGIN {ORS="" } {n=split($0,bp,"/");x=2;while(x<n){printf"/";print bp[x];x++}}'`
+    SERVS_NUM=$(( $SERVS_NUM +1 ))
+done < $CONFG_FILE
+
+while [ true ]  
+do
+   for(( si=0; si<$SERVS_NUM;si++ ))
+   do
+     protect ${SERVS[$si]} ${PATHVS[$si]}
+   done
+   
+   #多少秒检测一次，可直接改
+	 sleep 10    
+done
+
+
+
+
+
+
+
+
+
+
+

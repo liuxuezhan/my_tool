@@ -1,0 +1,37 @@
+<?php
+
+ return array(
+     'db'   => array(
+         'adapters'     => array(
+             'board_wx'    => array(
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+             'board_qq'     => array(
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+             'gateway'     => array(
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+             'namespace_1_0'    => array(//wx ios namespace
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+             'namespace_1_1'     => array(//wx android namespace
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+             'namespace_2_0'    => array(//qq ios namespace
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+             'namespace_2_1'     => array(//qq android namespace
+                 'username'      => 'cxdb',
+                 'password'      => 'cxdb@2014',
+             ),
+         ),
+     ),
+ );
+

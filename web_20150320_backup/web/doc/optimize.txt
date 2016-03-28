@@ -1,0 +1,7 @@
+性能优化
+１、添加各模块Autoloader Classmap，这样会加快各模块加载速度，但需要注意，在模块中新增模型、控制器文件或者改变文件名等情况需要重新生成。
+	生成命令：zf2/bin/classmap_generator.php(.bat) -w(覆盖）
+2、添加Gateway模块Template Map，这样会加快各模块视图模板加载速度，同样需要注意，在模块中新增视图文件时需要重新生成。
+	生成命令：zf2/bin/templatemap_generator.php(.bat)
+	然后在module.config.php中添加view_manager->template_map键并引用该文件
+3、添加Module Config Cache，这样会缓存module config信息，配置文件在/config/autoload/modulecache.local.php

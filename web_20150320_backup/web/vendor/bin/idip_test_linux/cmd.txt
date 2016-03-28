@@ -1,0 +1,68 @@
+//功能测试
+./idip_test --type=func --ip=192.168.0.6 --port=9010 --path=/qq/idip/send --config_file=cx_idip.xml
+//压力测试
+./idip_test --type=pressure --ip=192.168.0.6 --port=9010 --thread_count=3 --send_times=5000 --path=/qq/idip/send --config_file=cx_idip.xml --request_file=request.txt
+
+//腾讯测试服
+./idip_test --type=func --ip=10.142.5.69 --port=9010 --path=/idip/send --config_file=cx_idip.xml
+
+./idip_test --type=pressure --ip=10.142.5.69 --port=9010 --thread_count=3 --send_times=5000 --path=/idip/send --config_file=cx_idip.xml --request_file=request.txt
+
+//微信
+//--ios
+//cmd=0x101d&area=1&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=10806&level=1&item_num=1&source=1&serial=test
+//--android
+//cmd=0x101d&area=1&platid=1&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=10806&level=1&item_num=1&source=1&serial=test
+
+
+//手Q
+//--ios
+//修改金币
+cmd=0x1001&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=1&source=1&serial=test
+//修改将魂
+cmd=0x1003&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=3&source=1&serial=test
+//修改群英会声望请求
+cmd=0x1005&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=5&source=1&serial=test
+//修改过关斩将功勋请求
+cmd=0x1007&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=7&source=1&serial=test
+//修改体力值请求
+cmd=0x1009&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=9&source=1&serial=test
+//修改主公经验请求
+cmd=0x100b&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=11&source=1&serial=test
+//修改石料数量请求
+cmd=0x100d&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=13&source=1&serial=test
+//修改技能点数目请求
+cmd=0x100f&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&value=15&source=1&serial=test
+//赠送武将请求
+cmd=0x1011&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=1001&level=2&source=1&serial=test
+//删除武将请求
+cmd=0x1013&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=1001&level=2&source=1&serial=test
+
+
+//赠送装备请求
+cmd=0x1019&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=10001&level=1&item_num=1&source=1&serial=test
+
+//赠送道具
+cmd=0x101d&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=10806&level=1&item_num=1&source=1&serial=test
+
+
+//--android
+cmd=0x101d&area=2&platid=1&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=10806&level=1&item_num=1&source=1&serial=test
+
+cmd=0x102b&area=2&platid=0&partition=1&openid=B26687C0A3E608AFFE368F28B4056502&item_id=10806&level=1&item_num=1&source=1&serial=test
+
+
+
+
+
+4125:
+data_packet={ "head" : { "PacketLen" : null , "Cmdid" : 4125 , "Seqid" : 3 , "ServiceName" : "CX" , "SendTime" : 20141103 , "Version" : 2 , "Authenticate" : "" , "Result" : 0 , "RetErrMsg" : "" }, "body" : { "AreaId" : 2, "PlatId" : 0, "Partition" : 1, "OpenId" : "B26687C0A3E608AFFE368F28B4056502", "ItemId" : 10806, "Level" : 1, "ItemNum" : 1, "Source" : 1, "Serial" : "test" } }
+
+4135:
+data_packet={ "head" : { "PacketLen" : null , "Cmdid" : 4135 , "Seqid" : 3 , "ServiceName" : "CX" , "SendTime" : 20141104 , "Version" : 2 , "Authenticate" : "" , "Result" : 0 , "RetErrMsg" : "" }, "body" : { "AreaId" : 2, "PlatId" : 0, "OpenId" : "B26687C0A3E608AFFE368F28B4056502", "PageNo" : 1, "Source" : 1, "Serial" : "test" } }
+
+4137:
+data_packet={ "head" : { "PacketLen" : null , "Cmdid" : 4137 , "Seqid" : 3 , "ServiceName" : "CX" , "SendTime" : 20141103 , "Version" : 2 , "Authenticate" : "" , "Result" : 0 , "RetErrMsg" : "" }, "body" : { "AreaId" : 2, "PlatId" : 0, "Partition" : 1, "OpenId" : "B26687C0A3E608AFFE368F28B4056502", "Source" : 1, "Serial" : "test" } }
+
+
+

@@ -1,0 +1,6 @@
+<?php
+return array(
+    'msdk'              => array(
+        'host'              => 'msdk.qq.com',
+    ),
+);

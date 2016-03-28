@@ -1,0 +1,33 @@
+[环境要求]
+1、LAMP/LNMP/WAMP/WNMP皆可，建议使用LNMP。
+2、Linux要求流行linux发行版，版本尽量最新。
+3、Apache的话需要mod_rewrite模块，Nginx不需要。Apache建议2.2版本以上，Nginx建议1.6版本以上。
+4、PHP最低版本要求5.3.8以上，建议5.5以上。
+5、MySQL建议使用5.6以上，也可以使用其它兼容的变种MySQL。
+
+[Nginx配置]
+1、如果是产品环境，需要将fastcgi.conf里面的APPLICATION_ENV由development改为production
+2、nginx.conf里面include vhost/*.conf，如果要新增虚拟主机，直接在vhost目录里面新增一个配置文件即可。
+3、ZF2框架需要下面这一句配置，表示将所有根请求转发至/index.php处理：
+      location / {
+          try_files $uri $uri/ /index.php;
+      }
+4、root请指向项目目录下的public目录
+
+[PHP配置]
+１、使用php-fpm方式，修改php-fpm.conf文件
+２、里面可以多配置几个pool
+
+[MySQL配置]
+
+
+[ZF2配置]
+１、配置文件全部在/config下面。
+２、application.config.php里面可以指定启动的模块。
+３、autoload里面的各文件为配置文件，其中
+	global.php	全局配置文件
+	local.php	本地配置文件
+	cx.*.php	项目配置文件（其中development为开发环境配置，production为产品环境配置）
+4、目录部署好后需要将/logs目录设置为777，或者是www用户可写，并touch cx.log文件（同样777）。
+5、目录部署好后需要将/data/cache目录设置为777，因为缓存文件需要写在该目录中。
+６、日志的部分，除nginx、php-fpm产生的日志之外，在接口中生成的日志写在了logs/cx.log文件中，该文件增长较快，需要使用logrotate对日志进行切割和压缩。

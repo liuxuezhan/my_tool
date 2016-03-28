@@ -1,0 +1,57 @@
+<?php
+
+return array(
+    'db'        => array(
+        'adapters'      => array(
+            'board_wx'    => array(
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_wx_release_relation;port=10005;host=gamedb.wxsns.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+            'board_qq'     => array(
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_qq_release_relation;port=10004;host=gamedb.qqsns.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+            'gateway'       => array(
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_idip_release_idip;port=10006;host=gamedb.idip.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+            'namespace_1_0'    => array(//wx ios namespace
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_iwx_release_namespace;port=10003;host=gamedb.nameiwxpr3.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+            'namespace_1_1'     => array(//wx android namespace
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_awx_release_namespace;port=10002;host=gamedb.nameawxpr3.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+            'namespace_2_0'    => array(//qq ios namespace
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_iqq_release_namespace;port=10001;host=gamedb.nameiqqpr3.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+            'namespace_2_1'     => array(//qq android namespace
+                'driver'        => 'Pdo',
+                'dsn'           => 'mysql:dbname=db_aqq_release_namespace;port=10000;host=gamedb.nameaqqpr3.cx.db;charset=utf8',
+                'driver_options'=> array(
+                    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+                ),
+            ),
+        ),
+    ),
+ );

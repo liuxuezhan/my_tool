@@ -1,0 +1,18 @@
+{application, wscli,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { wscli_app, []}},
+  {env, [
+    {homepage, "/home/loon/yx/epp/index.html"},
+    {docroot, "/home/loon/yx/epp"},
+    {gatehost, "127.0.0.1"},
+    {gateport, 8001},
+    {port, 8003}
+  ]}
+ ]}.
