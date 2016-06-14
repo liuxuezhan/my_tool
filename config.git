@@ -11,6 +11,6 @@
 	hideDotFiles = dotGitOnly
 [remote "all"]
 	url = https://liuxuezhan@git.oschina.net/liuxuezhan/my_tool.git
-	url = https://liuxuezhan@git.coding.net/liuxuezhan/my_tool.git
 	url = https://liuxuezhan@github.com/liuxuezhan/my_tool.git
+	url = https://liuxuezhan@git.coding.net/liuxuezhan/my_tool.git
 	url = https://arron126@code.csdn.net/arron126/my_tool.git
