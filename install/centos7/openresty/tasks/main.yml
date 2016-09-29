@@ -1,0 +1,17 @@
+- name: bak 
+shell: mv  /etc/php.ini /etc/php.ini.old 
+
+- name: copy 
+  template: src=php.ini dest=/etc/php.ini owner=root group=root mode=777 force=yes
+
+- name: php-fpm  
+  shell: chkconfig php-fpm on 
+
+- name: php-fpm start  
+  shell:  service php-fpm start  
+
+- name: php  
+  shell:  php  
+
+- name: my_tool  
+  shell:  git clone https://liuxuezhan@git.oschina.net/liuxuezhan/my_tool.git    

@@ -1,0 +1,11 @@
+- name: copy 
+  template: src=iptables.sh dest=/root/iptables.sh owner=root group=root mode=777 force=yes
+
+- name: bak  
+shell: mv -bf /etc/sysconfig/iptables /etc/sysconfig/iptables.old 
+
+- name: copy2 
+  template: src=iptables dest=/etc/sysconfig/iptables owner=root group=root mode=777 force=yes
+
+- name: intsall  
+  shell: sh iptables.sh chdir=/root 

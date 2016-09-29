@@ -1,0 +1,5 @@
+- name: copy 
+  template: src=vim.sh dest=/root/vim.sh owner=root group=root mode=777 force=yes
+
+- name: intsall  
+  shell: sh vim.sh chdir=/root 
