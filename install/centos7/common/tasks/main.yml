@@ -1,3 +1,7 @@
+
+- name: copy 
+  template: src=OpenResty.repo dest= /etc/yum.repos.d/OpenResty.repo owner=root group=root mode=777 force=yes
+
 - name: yum 
   yum: name={{ item }} state=latest
   with_items:
@@ -37,6 +41,8 @@
     - php-devel
     - pcre-devel
     - openssl-devel
+    - mongodb-org
+    - openresty
     - mongodb-org
 
 - name: pip 
