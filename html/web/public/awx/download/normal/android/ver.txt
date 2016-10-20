@@ -1,5 +1,0 @@
-tag
-60759
-1.0.5
-http://dlied5.qq.com/cx/normal/android/60759/
-{"extern":1}

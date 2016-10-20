@@ -1,3 +1,0 @@
-{
-	"1":{"ID":1,"STATUS":1,"PORT":9002,"NAME":"卧龙岗","IP":"pr2qq.cx.qq.com","LOGIC":"33"}
-}
